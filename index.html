@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
 </head>
 <body>
+    <script>
+        fetch('http://catfacts-api.appspot.com/api/facts?number=99', { mode: 'no-cors'})
+          .then(blob => blob.json())
+          .then(data => {
+            console.table(data);
+            return data;
+          })
+          .catch(e => {
+            console.log(e);
+            return e;
+          });
+    </script>
     <script src="https://unpkg.com/proxied-fetch@latest/dist/bundle.umd.js"></script>
     <script>
         var myProxies = ['https://thingproxy.freeboard.io/fetch/', 'https://cors.io/?'];
