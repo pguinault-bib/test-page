@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script src="https://unpkg.com/proxied-fetch@latest/dist/bundle.umd.js"></script>
+    <script>
+        proxiedFetch('https://dns.google/resolve?name=0.5.5.9.6.1.1.0.8.4.1.4.5.gtin.gs1.id.gdso.org&type=NAPTR')
+            .then(res => res.json())
+            .then(data => console.log(data));
+    </script>
+</body>
+</html>
