@@ -5,7 +5,7 @@
 </head>
 <body>
     <script>
-        fetch('http://catfacts-api.appspot.com/api/facts?number=99', { mode: 'no-cors'})
+        fetch('https://api.chucknorris.io/jokes/random', { mode: 'no-cors'})
           .then(blob => blob.json())
           .then(data => {
             console.table(data);
